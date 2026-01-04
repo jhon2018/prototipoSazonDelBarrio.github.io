@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#D9534F">
+    <title>SAZÓN DEL BARRIO - El Sabor de Los Ángeles</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- PDF Generation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script>
+        window.tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D9534F",
+                        secondary: "#E87C38",
+                        accent: "#F0AD4E",
+                        "bg-warm": "#FFF9F0",
+                        "dark-main": "#120D0C"
+                    },
+                    fontFamily: {
+                        sans: ["Poppins", "sans-serif"],
+                        display: ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '3rem'
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        * { -webkit-tap-highlight-color: transparent; }
+        html { scroll-behavior: smooth; }
+        body { 
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .animate-bounce-short { animation: bounce 1.2s infinite; }
+        @keyframes bounce {
+            0%, 100% { transform: translate(-50%, -5%); animation-timing-function: cubic-bezier(0.8,0,1,1); }
+            50% { transform: translate(-50%, 0); animation-timing-function: cubic-bezier(0,0,0.2,1); }
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D9534F; border-radius: 10px; }
+        
+        /* Animación para indicar desplazamiento horizontal en móviles */
+        @keyframes horizontal-peek {
+            0% { transform: translateX(0); }
+            15% { transform: translateX(-30px); }
+            30% { transform: translateX(0); }
+            45% { transform: translateX(-15px); }
+            60% { transform: translateX(0); }
+        }
+
+        .peek-animation {
+            animation: horizontal-peek 3s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        @media (min-width: 1024px) {
+            .peek-animation {
+                animation: none;
+            }
+        }
+
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/prototipoSazonDelBarrio.github.io/assets/index-BUyCmJAz.js"></script>
+</head>
+<body class="bg-white dark:bg-dark-main text-gray-900 dark:text-gray-100 antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+    <div id="root"></div>
+</body>
+</html>
