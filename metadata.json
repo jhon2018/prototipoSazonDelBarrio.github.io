@@ -1,0 +1,10 @@
+
+{
+  "name": "SAZÓN DEL BARRIO - El Sabor de Los Ángeles",
+  "description": "Plataforma de pedidos avanzada para Sazón del Barrio. Gestión de delivery, geolocalización y comprobantes PDF.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
