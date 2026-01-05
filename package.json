@@ -1,15 +1,12 @@
 {
   "name": "sazon-del-barrio",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jhon2018.github.io/prototipoSazonDelBarrio.github.io",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "start": "vite preview --port 10000" 
   },
   "dependencies": {
     "react": "^19.2.3",
@@ -19,7 +16,6 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.0",
-    "gh-pages": "^6.3.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
